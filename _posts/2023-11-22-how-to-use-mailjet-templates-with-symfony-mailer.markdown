@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "How to use Mailjet templates with Symfony mailer"
 date:   2023-11-22 23:14:02 +0100
 categories: jekyll update
 ---
