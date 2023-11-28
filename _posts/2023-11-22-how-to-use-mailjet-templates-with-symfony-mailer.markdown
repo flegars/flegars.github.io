@@ -267,27 +267,26 @@ namespace App\Email;
 
 final readonly class Foo
 {
-		public function __construct(private MailjetInterface $mailjet)
-		{
-		}
+    public function __construct(private MailjetInterface $mailjet)
+    {
+    }
 
-		public function __invoke(): void
-		{
-			$email = (new MailjetEmail())
-            ->from('foo@bar.com')
-            ->to('john@doe.com')
-            ->subject('This is an email')
-            ->templateId(100) // Should be your mailjet template id
-            ->templateLanguage(true)
-            ->templateVariables([
-			          'var1' => 'test',
-					  'var2' => 'test 2'
-              ])
+    public function __invoke(): void
+    {
+        $email = (new MailjetEmail())
+        ->from('foo@bar.com')
+        ->to('john@doe.com')
+        ->subject('This is an email')
+        ->templateId(100) // Should be your mailjet template id
+        ->templateLanguage(true)
+        ->templateVariables([
+                    'var1' => 'test',
+                    'var2' => 'test 2'
             ])
-        ;
-	
-	      $this->mailjet->send($email);
-		}
+        ]);
+
+        $this->mailjet->send($email);
+    }
 }
 ```
 [jekyll-docs]: https://jekyllrb.com/docs/home
