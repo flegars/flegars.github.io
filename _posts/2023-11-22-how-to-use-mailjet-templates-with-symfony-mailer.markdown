@@ -273,7 +273,7 @@ final readonly class Foo
 
 		public function __invoke(): void
 		{
-				$email = (new MailjetEmail())
+			$email = (new MailjetEmail())
             ->from('foo@bar.com')
             ->to('john@doe.com')
             ->subject('This is an email')
@@ -281,7 +281,7 @@ final readonly class Foo
             ->templateLanguage(true)
             ->templateVariables([
 			          'var1' => 'test',
-								'var2' => 'test 2'
+					  'var2' => 'test 2'
               ])
             ])
         ;
