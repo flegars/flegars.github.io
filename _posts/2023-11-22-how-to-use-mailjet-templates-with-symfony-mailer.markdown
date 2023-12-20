@@ -61,7 +61,7 @@ final class Mailjet implements EmailInterface
     ) {
         $this->bus = $bus;
         $this->dispatcher = $dispatcher;
-				$this->transport = Transport::fromDsn($this->parameterBag->get('mailer_dsn'));
+		$this->transport = Transport::fromDsn($this->parameterBag->get('mailer_dsn'));
     }
 
     public function send(RawMessage $message, Envelope $envelope = null): void
